@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js image slider</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            .slide {
+            width: 500px;
+            height: 400px;
+            position: absolute;
+            transition :20s;
+
+        }
+        button{
+            margin-top: 450px;
+            padding: 15px;
+        }
+        </style>
+   <script>
+  var images = [
+  "shoes/2a.jpg", 
+  "shoes/3a.jpg", 
+  "shoes/4a.jpg",
+  "shoes/5a.jpg", 
+  "shoes/6a.jpg", 
+  "shoes/7a.jpg",
+  "shoes/8a.jpg", 
+  "shoes/9a.jpg", 
+  "shoes/11a.jpg",
+  ];
+  var num = 0;
+
+function next() {
+  var slider = document.getElementById("slider");
+  num++;
+  if(num >= images.length) {
+    num = 0;
+
+  }
+  slider.src = images[num];
+  }
+</script>
+
+    </head>
+    <body>
+        <div>
+  
+  <img id="slider" class="slide" src="shoes/26a.png" 
+    width="500px" height="400px"/>
+    <button onclick="prev()"> Prev </button>
+  <button onclick="next()"> Next </button>
+</div>
+    </body>
+</html>
